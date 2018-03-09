@@ -8,6 +8,13 @@ import "../sass/style.scss"
 ---------------------------------*/
 import Vue from "vue"
 import VueRouter from "vue-router"
+import * as viewportUnitsBuggyfill from 'viewport-units-buggyfill'
+
+/*---------------------------------
+|  init
+---------------------------------*/
+viewportUnitsBuggyfill.init()
+window.addEventListener('resize', viewportUnitsBuggyfill.refresh, true)
 
 /*---------------------------------
 |  vue-plugin
