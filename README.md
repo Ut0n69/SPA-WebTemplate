@@ -2,6 +2,17 @@
 
 A template for me.....
 
+## Usage
+```
+$ git clone https://github.com/Ut0n69/Vue-template.git
+
+$ npm install
+
+$ npm run build
+
+$ npm start
+```
+
 ## What's in the template?
 
 - browser-sync
@@ -12,6 +23,20 @@ A template for me.....
 - express
 - vue
 - vue router
+- heroku
+
+## Deploy to heroku
+```
+$ heroku login
+$ heroku create <YOUR_APP_NAME>
+$ rm -rf .git
+$ git init
+$ git add .
+$ git commit -m "Add: initial commit"
+$ git remote add heroku git@heroku.com:<YOUR_APP_NAME>.git
+$ git push heroku master
+$ heroku open
+```
 
 ## Licence
 
