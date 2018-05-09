@@ -1,10 +1,12 @@
-# Vue-template
+# SPA Template With Vue.js
 
 A template for me.....
 
 ## Usage
 ```
-$ git clone https://github.com/Ut0n69/Vue-template.git
+$ git clone https://github.com/Ut0n69/spa-template-with-vuejs.git
+
+$ cd spa-template-with-vuejs/
 
 $ npm install
 
