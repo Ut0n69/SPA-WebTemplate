@@ -1,56 +1,33 @@
-var webpack = require('webpack')
-
 module.exports = {
-  entry: './src/js/main.js',
+  entry: './src/main.js',
   output: {
-    path: `${__dirname}/public/script`,
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    path: `${__dirname}/public`,
+  },
+  module: {
+    rules: [{
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          postcss: [require('autoprefixer')()],
+          autoprefixer: false,
+          js: 'babel-loader?presets=es2015'    
+        }
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader?presets=es2015',
+      },
+      {
+        test: /\.(css|sass|scss)$/,
+        loader: 'sass-loader'
+      },
+    ]
   },
   resolve: {
+    extensions: ['.js', '.vue'],
     alias: {
-      'vue$': 'vue/dist/vue.js'
-    },
-  },
-  // babel
-  module: {
-    rules: [{
-      test: /\.js$/,
-      use: [{
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            ['env', {
-              'modules': false
-            }]
-          ]
-        }
-      }]
-    }]
-  },
-  // sass
-  module: {
-    rules: [{
-      test: /\.scss/,
-      use: [
-        'style-loader',
-        {
-          loader: 'css-loader',
-          options: {
-            url: false,
-          },
-        },
-        'sass-loader',
-        {
-          loader: 'postcss-loader',
-          options: {
-            plugins: function () {
-              return [
-                require('autoprefixer')
-              ];
-            }
-          }
-        }
-      ]
-    }]
-  },
+      vue$: 'vue/dist/vue.esm.js',
+    }
+  }
 }

@@ -18,7 +18,7 @@ module.exports = {
             "port": 8081
         }
     },
-    "files": ["./public/script/bundle.js", "./public/index.html"],
+    "files": ["./public/bundle.js", "./public/index.html"],
     "watchEvents": [
         "change"
     ],
