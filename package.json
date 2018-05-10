@@ -7,8 +7,8 @@
     "production": "webpack --mode production",
     "dev": "nodemon server.js",
     "bs": "browser-sync start --config bs-config.js",
-    "serve": "webpack --watch & npm run dev",
-    "start": "webpack --watch & npm run bs"
+    "serve": "webpack --mode development--watch & npm run dev",
+    "start": "webpack --mode development --watch & npm run bs"
   },
   "author": "Ut0n69",
   "devDependencies": {
