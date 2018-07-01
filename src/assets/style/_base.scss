@@ -1,0 +1,20 @@
+@charset "utf-8";
+$headerWidth: 100%;
+$headerHeight: 70px;
+$mainColor: #fff;
+$subColor: #000;
+$fontColor: #000;
+$backgroundColor: #fff;
+$menuWidth: 250px;
+$menuHeight: 100vh;
+
+$z-menu__contents: 999;
+$z-menu__button: 2;
+$z-menu__blur: 3;
+
+$breakpoint: 768px;
+@mixin mq() {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
