@@ -1,5 +1,6 @@
 module.exports = {
   entry: './src/main.js',
+  mode: 'development',
   output: {
     filename: 'bundle.js',
     path: `${__dirname}/public`,
@@ -11,7 +12,7 @@ module.exports = {
         options: {
           postcss: [require('autoprefixer')()],
           autoprefixer: false,
-          js: 'babel-loader?presets=es2015'    
+          js: 'babel-loader?presets=es2015'
         }
       },
       {
@@ -29,5 +30,9 @@ module.exports = {
     alias: {
       vue$: 'vue/dist/vue.esm.js',
     }
+  },
+  devServer: {
+    contentBase: 'public',
+    open: true
   }
 }

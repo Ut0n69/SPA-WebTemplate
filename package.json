@@ -6,9 +6,8 @@
     "build": "webpack --mode development",
     "production": "webpack --mode production",
     "dev": "nodemon server.js",
-    "bs": "browser-sync start --config bs-config.js",
-    "serve": "webpack --mode development--watch & npm run dev",
-    "start": "webpack --mode development --watch & npm run bs"
+    "serve": "webpack-dev-server & npm run dev",
+    "start": "webpack-dev-server"
   },
   "author": "Ut0n69",
   "devDependencies": {
@@ -16,7 +15,6 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
-    "browser-sync": "^2.23.6",
     "css-loader": "^0.28.9",
     "node-sass": "^4.7.2",
     "postcss-loader": "^2.1.0",
@@ -25,7 +23,8 @@
     "vue-loader": "^14.2.2",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^4.8.1",
-    "webpack-cli": "^2.1.3"
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
     "express": "^4.16.2",
