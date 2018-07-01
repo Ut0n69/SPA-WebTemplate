@@ -33,12 +33,10 @@
   }
     
   .container {
-    width: calc(100% - #{$menuWidth});
+    width: 100%;
     height: calc(100vh - #{$headerHeight});
     border-right: 3px solid $subColor;
-    position: fixed;
-    top: $headerHeight;
-    left: $menuWidth;
+    padding-top: $headerHeight;
   }
   
   .fade-enter-active,

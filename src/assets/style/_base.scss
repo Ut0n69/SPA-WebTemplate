@@ -6,4 +6,15 @@ $subColor: #000;
 $fontColor: #000;
 $backgroundColor: #fff;
 $menuWidth: 250px;
-$menuHeight: calc(100vh - #{$headerHeight});
+$menuHeight: 100vh;
+
+$z-menu__contents: 999;
+$z-menu__button: 2;
+$z-menu__blur: 3;
+
+$breakpoint: 768px;
+@mixin mq() {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
