@@ -35,7 +35,6 @@
   .container {
     width: 100%;
     height: calc(100vh - #{$headerHeight});
-    border-right: 3px solid $subColor;
     padding-top: $headerHeight;
   }
   
