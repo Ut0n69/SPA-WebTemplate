@@ -11,40 +11,39 @@
 </template>
 
 <script>
-  import Vue from 'vue'
-  import Header from '@/components/modules/Header'
-  import Menu from '@/components/modules/Menu'
+import Vue from "vue";
+import Header from "@/components/modules/Header";
+import Menu from "@/components/modules/Menu";
 
-  export default Vue.extend({
-    components: {
-      Header,
-      Menu
-    }
-  })
-  
+export default Vue.extend({
+  components: {
+    Header,
+    Menu
+  }
+});
 </script>
 
 <style lang="scss">
-  @import "./assets/style/reset";
-  @import "./assets/style/base";
+@import "./assets/style/reset";
+@import "./assets/style/base";
 
-  body {
-    background: $backgroundColor;
-  }
-    
-  .container {
-    width: 100%;
-    height: calc(100vh - #{$headerHeight});
-    padding-top: $headerHeight;
-  }
-  
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: opacity .3s
-  }
-  
-  .fade-enter,
-  .fade-leave-active {
-    opacity: 0
-  }
+body {
+  background: $backgroundColor;
+}
+
+.container {
+  width: 100%;
+  height: calc(100vh - #{$headerHeight});
+  padding-top: $headerHeight;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
 </style>
