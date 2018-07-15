@@ -49,11 +49,11 @@
   "lint-staged": {
     "*.js": [
       "eslint --ext .js src --fix",
-      "git add"
+      "git add ."
     ],
     "*.vue": [
       "eslint --ext .vue src --fix",
-      "git add"
+      "git add ."
     ]
   }
 }
