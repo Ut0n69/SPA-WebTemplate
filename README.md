@@ -26,6 +26,8 @@ $ npm start
 - vue
 - vue router
 - heroku
+- ESLint
+- Prettier
 
 ## Deploy to heroku
 ```
